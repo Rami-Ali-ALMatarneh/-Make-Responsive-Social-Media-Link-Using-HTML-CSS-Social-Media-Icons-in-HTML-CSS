@@ -1,0 +1,105 @@
+:root {
+  --facbookColor: #3b5998;
+  --instagramColor: linear-gradient(to right, #d62976, #4f5bd5);
+  --youtubeColor: #cd201f;
+  --twitterColor: #55acee;
+  --linkedInColor: #0077b5;
+  --f: #517bd8;
+  --i: #d62976;
+  --y: #e74444;
+  --t: #7abcee;
+  --l: #2ea7e7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  .socialMedia {
+    flex-direction: column;
+  }
+}
+.socialMedia > div {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: 0.5s;
+  overflow: hidden;
+  width: 70px;
+  box-shadow: 0px 26px 42px 12px rgba(0, 0, 0, 0.22),
+    0px 5px 14px 0px rgba(0, 0, 0, 0.18);
+}
+/********************************/
+.socialMedia > div:hover {
+  width: 170px;
+}
+/********************************/
+
+.socialMedia > div p {
+  position: absolute;
+  left: 75px;
+  display: block;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+.socialMedia > div i {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: white;
+}
+.facebook {
+  background-color: var(--f);
+}
+.instagram {
+  background-color: var(--i);
+}
+.youtube {
+  background-color: var(--y);
+}
+.linkedin {
+  background-color: var(--l);
+}
+.twitter {
+  background-color: var(--t);
+}
+
+.facebook i {
+  background-color: var(--facbookColor);
+}
+.instagram i {
+  background-image: var(--instagramColor);
+}
+.youtube i {
+  background-color: var(--youtubeColor);
+}
+.linkedin i {
+  background-color: var(--linkedInColor);
+}
+.twitter i {
+  background-color: var(--twitterColor);
+}
